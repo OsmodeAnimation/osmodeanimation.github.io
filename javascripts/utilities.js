@@ -9,7 +9,7 @@ class Utilities {
       id: 'utilities',
       name: 'Utilities',
 
-      color1: '#8BC34A',
+      color1: '#8BC34B',
       color2: '#7CB342',
       color3: '#689F38',
 
