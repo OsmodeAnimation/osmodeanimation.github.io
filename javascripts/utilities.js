@@ -38,7 +38,7 @@ class Utilities {
 
           blockType: Scratch.BlockType.BOOLEAN,
 
-          text: '[A] <= [B]',
+          text: '[A] ≤ [B]',
           arguments: {
             A: {
               type: Scratch.ArgumentType.NUMBER
@@ -54,7 +54,7 @@ class Utilities {
 
           blockType: Scratch.BlockType.BOOLEAN,
 
-          text: '[A] >= [B]',
+          text: '[A] ≥ [B]',
           arguments: {
             A: {
               type: Scratch.ArgumentType.NUMBER
