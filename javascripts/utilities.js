@@ -9,7 +9,7 @@ class Utilities {
       id: 'utilities',
       name: 'Utilities',
 
-      color1: '#8BC34B',
+      color1: '#8BC34A',
       color2: '#7CB342',
       color3: '#689F38',
 
@@ -294,11 +294,11 @@ class Utilities {
   }
   
   browserWidth() {
-    return document.documentElement.clientWidth;
+    return window.innerWidth;
   }
 
   browserHeight() {
-    return document.documentelement.clientHeight;
+    return window.innerHeight;
   }
 
 }
