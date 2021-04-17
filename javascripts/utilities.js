@@ -294,11 +294,11 @@ class Utilities {
   }
   
   browserWidth() {
-    return window.innerWidth;
+    return element.clientWidth;
   }
 
   browserHeight() {
-    return window.innerHeight;
+    return element.clientHeight;
   }
 
 }
