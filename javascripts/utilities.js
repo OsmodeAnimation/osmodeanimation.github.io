@@ -7,11 +7,11 @@ class Utilities {
   getInfo() {
     return {
       id: 'utilities',
-      name: 'Utilities',
+      name: 'Utlities',
 
-      color1: '#FF4F4F',
-      color2: '#AD0000',
-      color3: '#FF2B2B',
+      color1: '#8BC34A',
+      color2: '#7CB342',
+      color3: '#689F38',
 
       menuIconURI: icon,
 
@@ -21,7 +21,7 @@ class Utilities {
 
           blockType: Scratch.BlockType.BOOLEAN,
 
-          text: 'is [A] identical to [B]?',
+          text: 'is [A] exactly [B]?',
           arguments: {
             A: {
               type: Scratch.ArgumentType.STRING,
@@ -38,7 +38,7 @@ class Utilities {
 
           blockType: Scratch.BlockType.BOOLEAN,
 
-          text: '[A] ≤ [B]',
+          text: '[A] <= [B]',
           arguments: {
             A: {
               type: Scratch.ArgumentType.NUMBER
@@ -54,7 +54,7 @@ class Utilities {
 
           blockType: Scratch.BlockType.BOOLEAN,
 
-          text: '[A] ≥ [B]',
+          text: '[A] >= [B]',
           arguments: {
             A: {
               type: Scratch.ArgumentType.NUMBER
@@ -96,6 +96,16 @@ class Utilities {
           text: 'pi'
         },
         {
+          opcode: 'browserWidth',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'browser width'
+        },
+        {
+          opcode: 'browserHeight',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'browser height'
+        },
+        {
           opcode: 'ternaryOperator',
 
           blockType: Scratch.BlockType.REPORTER,
@@ -116,24 +126,6 @@ class Utilities {
           }
         },
         {
-          opcode: 'booleansOperator',
-
-          blockType: Scratch.BlockType.BOOLEAN,
-
-          text: 'if [A] then [B] else [C]',
-          arguments: {
-            A: {
-              type: Scratch.ArgumentType.BOOLEAN
-            },
-            B: {
-              type: Scratch.ArgumentType.BOOLEAN
-            },
-            C: {
-              type: Scratch.ArgumentType.BOOLEAN
-            }
-          }
-        },
-        {
           opcode: 'letters',
 
           blockType: Scratch.BlockType.REPORTER,
@@ -142,15 +134,15 @@ class Utilities {
           arguments: {
             START: {
               type: Scratch.ArgumentType.NUMBER,
-              defaultValue: 7
+              defaultValue: 5
             },
             END: {
               type: Scratch.ArgumentType.NUMBER,
-              defaultValue: 9
+              defaultValue: 7
             },
             STRING: {
               type: Scratch.ArgumentType.STRING,
-              defaultValue: 'green apple'
+              defaultValue: 'red apple'
             }
           }
         },
@@ -160,16 +152,11 @@ class Utilities {
           text: 'current millisecond'
         },
         {
-          opcode: 'newlineChar',
-          blockType: Scratch.BlockType.REPORTER,
-          text: 'newline'
-        },
-        {
           opcode: 'fetchFrom',
 
           blockType: Scratch.BlockType.REPORTER,
 
-          text: 'get [URL]',
+          text: 'get content from [URL]',
           arguments: {
             URL: {
               type: Scratch.ArgumentType.STRING,
@@ -260,15 +247,7 @@ class Utilities {
     return Math.PI;
   }
 
-  newlineChar() {
-    return \n;
-  }
-
   ternaryOperator({A, B, C}) {
-    return A ? B : C;
-  }
-
-  booleansOperator({A, B, C}) {
     return A ? B : C;
   }
 
@@ -312,6 +291,14 @@ class Utilities {
 
   regexReplace({STRING, REGEX, NEWSTRING}) {
     return STRING.toString().replace(new RegExp(REGEX, 'gi'), NEWSTRING);
+  }
+  
+  browserWidth() {
+    return window.innerWidth;
+  }
+
+  browserHeight() {
+    return window.innerHeight;
   }
 
 }
