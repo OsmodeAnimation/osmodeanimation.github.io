@@ -21,7 +21,7 @@ class Utilities {
 
           blockType: Scratch.BlockType.BOOLEAN,
 
-          text: 'is [A] exactly [B]?',
+          text: 'is [A] identical to [B]?',
           arguments: {
             A: {
               type: Scratch.ArgumentType.STRING,
